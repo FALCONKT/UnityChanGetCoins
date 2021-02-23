@@ -36,20 +36,6 @@ class ContactsController extends Controller
     public function confirm(ContactRequest  $request)
     {
         
-    // protected function validator(array $data)
-    // {
-    //     return Validator::make($data, [
-    //         'type' => ['required', 'bool'],
-    //         'name' => ['required', 'string', 'max:255'],
-    //         'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-    //         'password' => ['required', 'string', 'min:8', 'confirmed'],
-    //         'gender' => ['required'],
-    //         'body' => ['required', 'string'],
-
-    //     ]);
-    // }
-      
-        
         $contact = new Contact($request->all());
      
         // 「お問い合わせ種類（checkbox）」を配列から文字列に

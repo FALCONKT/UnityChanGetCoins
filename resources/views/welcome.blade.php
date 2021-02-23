@@ -23,7 +23,7 @@
             @endif
 
 
-<video src="/unitychancoin/resources/data/Video_01.mp4" loop autoplay muted></video>
+<video src="{{asset('/data/Video_01.mp4')}}" loop autoplay muted></video>
 
 
 

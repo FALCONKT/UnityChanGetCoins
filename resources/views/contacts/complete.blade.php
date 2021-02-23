@@ -12,10 +12,9 @@
                 
                 <div class="panel-body">
                     <p>お問い合わせありがとうございました！！</p>
-                    {!! link_to_route('/', 'TOPに戻る！！', [], ['class' => 'btn btn-primary']) !!}
-
+                    <a class="" href="/">TOPへ戻る</a>
                 </div>
- 
+                
             </div>
         </div>
     </div>
