@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+
+body{
+    background-color: #e0c69f;
+    width: 100%;
+}
+
+
+div#logo_part img#logo{
+    width: 45%;
+    display: block;
+    margin: 1.5% 0 1.5% 5%;
+}
+div#logo_part img#sublogo{
+    width: 30%;
+    display: block;
+    margin: 1.5% 0 1.5% 10%;
+}
+
+@media screen and (max-width: 768px){
+div#logo_part img#logo{
+    width: 75%;
+    margin: 1.5% auto;
+}
+div#logo_part img#sublogo{
+    width: 50%;
+    margin: 1% ;
+    margin: 1.5% auto;
+}
+}
+
+@media screen and (max-width: 480px){
+div#logo_part img#logo{
+    width: 100%;
+    display: block;
+    margin: 1.5% auto;
+}
+
+div#logo_part img#sublogo{
+    width: 60%;
+    display: block;
+    margin: 1.5% auto;
+    text-align: center;
+}
+
+}
+
+
+@font-face {
+  font-family: 'MyFont';
+  src: url("/data/g_comichorrorR_freeR.ttf");
+    /*src: url("file:///C:/Windows/Fonts/KozMinPro-Regular.otf");*/
+}
+
+h2{
+    font-size: 30px;
+    font-family: "MyFont","serif";
+    font-weight: bolder;
+    margin: 8% auto 4%;
+    color:#D94047;
+    text-align: center;
+}
+h3{
+    font-size: 25px;
+    font-family: "MyFont","serif";
+    font-weight: bolder;
+    margin: 4% 0% 2% 0%;
+    color:#D94047;
+}
+
+h4{
+    font-size: 20px;
+    font-family: "MyFont","serif";
+    font-weight: bolder;
+    color:#D94047;
+    width: 25%;
+    display: inline;
+    margin:2% 0% 0.5% 5%;
+}
+
+section#videozone video{
+    display: block;
+    width: 90%;
+    margin: 7% auto;
+}
+
+@media screen and (max-width: 480px){
+section#videozone video{
+    display: block;
+    width: 100%;
+    margin: 5% auto;
+}
+}
+
+label{
+    display:inline;
+}
+
+label .checkbox-inline{
+    display:inline;
+}
+
+input.form-control{
+    border:1.5px solid #e20000;
+}
+textarea.form-control{
+    border:1.5px solid #e20000;
+}
+
+/*#videozone*/

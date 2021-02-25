@@ -1,10 +1,15 @@
 <header class="mb-4">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav id="navin" class="navbar navbar-expand-sm navbar-dark bg-dark">
         {{-- トップページへのリンク --}}
+        <h1>
         <a class="navbar-brand" href="/">
-            <img src="{{asset('/img/MainTitleText.png')}}" alt="Unityちゃんと不思議な小判">
+        <div id="logo_part">
+            <img id="logo" src="{{asset('/img/MainTitleText.png')}}" alt="Unityちゃんと不思議な小判">
+            <img id="sublogo" src="{{asset('/img/SubTitleText.png')}}" alt="Unityちゃんと不思議な小判">
+        </div>
         </a>
-
+        </h1>
+        
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
             <span class="navbar-toggler-icon"></span>
         </button>
