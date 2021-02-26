@@ -76,7 +76,8 @@
         </section>
 
         <section id="game_disc">
-            <h2>Gameのとくちょー</h2>
+            
+            <h2>Gameのとくちょー </h2>
             
             <ul>
                 <li>不思議で和風な世界観の巨大な迷路攻略</li>
