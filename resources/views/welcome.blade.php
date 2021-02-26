@@ -66,12 +66,18 @@
         
             <h2>Unityちゃん</h2>
             
-            <div class="desc"> 
-            <p>Unity業界で超有名な操作Charactor！
-この度そのUnityちゃんが不思議な地獄迷宮に迷い込むことに。
-持ち前の必殺武器で敵を次々となぎ倒し、
-迷路を進んでいくことになった。</p>
-            </div>
+                <div class="set">
+                    <img src="{{asset('/img/UnityChan_img.png')}}">
+        
+                    <div class="desc"> 
+                    <p>Unity業界で超有名な操作Charactor！
+                    <br>
+                    この度そのUnityちゃんが不思議な地獄迷宮に迷い込むことに。
+                    <br>
+                    持ち前の必殺武器で敵を次々となぎ倒し,迷路を進んでいくことになった。
+                    </p>
+                    </div>
+                </div>
         
         </section>
 

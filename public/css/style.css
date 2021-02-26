@@ -77,6 +77,19 @@ h2{
     color:#D94047;
     text-align: center;
 }
+
+
+div.set{
+   display: flex; 
+}
+
+#unitychan img{
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
 h3{
     font-size: 25px;
     font-family: "MyFont","serif";
@@ -108,22 +121,24 @@ div#top_Image{
     display: block;
 }
 
-/*既存CSS上書き*/
-div.jumbotron{
-   padding: 0rem 2.5rem; 
-   background-color:#d8d0c5;
-}
-
 div#top_Image video{
     position: absolute;
     right: 0;
     left: 0;
     top:0;
+	min-width: 100%;
+	min-height: 100%;
     width: 100%;
     height: 100%;
     z-index: -100;
      background-size: cover;
     /*background: url('poster.jpg') no-repeat;*/
+}
+
+/*既存CSS上書き*/
+div.jumbotron{
+   padding: 0rem 2.5rem; 
+   background-color:#d8d0c5;
 }
 
 div.text-center.topButton{
