@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="text-center">
-        <h1>Log in</h1>
+        <h2>Log in</h2>
     </div>
 
     <div class="row">
-        <div class="col-sm-6 offset-sm-3">
+        <div class="col-sm-8 offset-sm-2">
 
             {!! Form::open(['route' => 'login.post']) !!}
                 <div class="form-group">

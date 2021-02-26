@@ -69,10 +69,7 @@ class ContactsController extends Controller
  
     // 二重送信防止
     $request->session()->regenerateToken();
-    
-    // 送信Pageへ遷移
-    return view('contacts.complete');
-    
+
     
     
     //  Mail::to($request->email)->send(new \App\Mail\Contact(
@@ -89,11 +86,11 @@ class ContactsController extends Controller
     //  ));
 
     // 送信メール
-    Mail::to($request->email)->send(new \App\Mail\Contact([
-    // Mail::send(new \App\Mail\Contact([
+    // Mail::to($request->email)->send(new \App\Mail\Contact([
+    Mail::send(new \App\Mail\Contact([
         'to' => $request->email,
         'to_name' => $request->name,
-        'from' => 'falcon9628@yahoo.co.jp',
+        'from' => '2c5c7a3eee-977883@inbox.mailtrap.io',
         'from_name' => 'MySite',
         'subject' => 'お問い合わせありがとうございました。',
         'type' => $request->type,
@@ -103,9 +100,9 @@ class ContactsController extends Controller
     );
  
     // 受信メール
-    Mail::to($request->email)->send(new \App\Mail\Contact([
-    // Mail::send(new \App\Mail\Contact([
-        'to' => 'falcon9628@yahoo.co.jp',
+    // Mail::to($request->email)->send(new \App\Mail\Contact([
+    Mail::send(new \App\Mail\Contact([
+        'to' => '2c5c7a3eee-977883@inbox.mailtrap.io',
         'to_name' => 'MySite',
         'from' => $request->email,
         'from_name' => $request->name,
@@ -115,6 +112,12 @@ class ContactsController extends Controller
         'body' => $request->body
         ], 'from')
     );
+        
+        
+            
+    // 送信Pageへ遷移
+    return view('contacts.complete');
+    
         
     }
     // complete
