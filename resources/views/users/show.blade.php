@@ -5,7 +5,7 @@
         <aside class="col-sm-4">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">{{ $user->name }}</h3>
+                    <h3 class="card-title">User {{ $user->name }}</h3>
                 </div>
                 <div class="card-body">
                     {{-- ユーザのメールアドレスをもとにGravatarを取得して表示 --}}
@@ -15,9 +15,23 @@
         </aside>
         <div class="col-sm-8">
             <ul class="nav nav-tabs nav-justified mb-3">
-                {{-- ユーザ詳細タブ --}}
-                <li class="nav-item"><a href="#" class="nav-link">TimeLine</a></li>
+                {{--<li class="nav-item"><a href="#" class="nav-link">TimeLine</a></li>--}}
             </ul>
+            
+            <div class="gamebanner">
+            <a href="/gamedata/index.html">
+                <img src="{{asset('/img/Game_Banner.png')}}" alt="GameStart">
+            </a>
+            </div>
+
+
         </div>
+
+        <div>
+       {{--  {!! link_to_route('gamedata.index', 'Game', ['user' => Auth::id()], ['class' => '']) !!}--}}
+        </div>
+    
+           
+
     </div>
 @endsection

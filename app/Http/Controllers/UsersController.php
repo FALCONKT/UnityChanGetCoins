@@ -25,4 +25,16 @@ class UsersController extends Controller
     }
     
     
+    public function index($id=1)
+    {
+        // idの値でユーザを検索して取得
+        $user = User::findOrFail($id);
+
+        // ユーザ詳細ビューでそれを表示
+        return view('gamedata.index', [
+            'user' => $user,
+        ]);
+    }
+    
+    
 }

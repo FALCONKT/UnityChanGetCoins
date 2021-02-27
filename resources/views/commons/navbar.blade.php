@@ -4,8 +4,7 @@
         <h1>
         <a class="navbar-brand" href="/">
         <div id="logo_part">
-            <img id="logo" src="{{asset('/img/MainTitleText.png')}}" alt="Unityちゃんと不思議な小判">
-            <img id="sublogo" src="{{asset('/img/SubTitleText.png')}}" alt="Unityちゃんと不思議な小判">
+            <img id="logo" src="{{asset('/img/Title.png')}}" alt="Unityちゃんと不思議な小判">
         </div>
         </a>
         </h1>

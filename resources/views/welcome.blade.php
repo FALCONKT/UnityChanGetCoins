@@ -13,17 +13,17 @@
             <!--LogInしている場合-->
                 <!--<h1>Unityちゃんと不思議な小判</h1>-->
                  {{-- 会員ページへのリンク --}}
-                {!! link_to_route('users.show', '会員Pageへ', ['user' => Auth::id()], ['class' => 'btn btn-lg btn-primary']) !!}
+                {!! link_to_route('users.show', '', ['user' => Auth::id()], ['class' => 'MemberpButton animate__animated animate__heartBeat']) !!}
                 
 
             @else
             <!--LogInしていない場合-->
                 <!--<h1>Unityちゃんと不思議な小判</h1>-->
                  {{-- ユーザ登録ページへのリンク --}}
-                {!! link_to_route('signup.get', '会員登録してPlayする！！', [], ['class' => 'btn btn-lg btn-primary']) !!}
-
+                {!! link_to_route('signup.get', '', ['user' => Auth::id()], ['class' => 'SignUpButton animate__animated animate__heartBeat']) !!}
+            
             @endif
-        
+
         </div>
 
 
@@ -47,7 +47,7 @@
 
         <section id="story">
 
-            <h2>説話</h2>
+            <h2>説　　話</h2>
            
            <div class="desc"> 
             <p>飛び散る血液、上からもぎ取られる頭、容赦なく引き裂かれる肉体……<br>
@@ -98,15 +98,17 @@
         </section>
 
         <section id="youkai">
-            <h2>じごく迷路の敵達</h2>
+            <h2>じごく迷路のようかい達</h2>
             <div class="enemy_stack">
                 <div class="enemy">
                 <h3>すらいむ</h3>
+                <img src="{{asset('/img/slime.png')}}" alt="スライム">
                 <p>敵といえば、最初は正にすらいむ！大きいものや小さいものまで幅広く存在する。ときに仲間になることもある。</p>
                     
                 </div>
                 <div class="enemy">
-                <h3>豆鬼</h3>
+                <h3>豆おに</h3>
+                <img src="{{asset('/img/demonbox.png')}}" alt="豆鬼">
                 <p>箱型の小型の鬼。小さいからといって侮れない。しつこく食いついてくる。</p>
                  
                 </div>
@@ -114,6 +116,7 @@
             <div class="enemy_stack">
                 <div class="enemy">
                 <h3>どくろMan</h3>
+                <img src="{{asset('/img/skelton.png')}}" alt="どくろMan">
                 <p>迷路で死んだ旅人のなれの果て。化けて迷路に迷い込むものに襲い掛かる。
 </p>
                     
@@ -121,6 +124,7 @@
                 
                 <div class="enemy">
                 <h3>河童</h3>
+                <img src="{{asset('/img/kappa.png')}}" alt="河童">
                 <p>地獄迷路の血の池周辺に頻出する水性のお化け。大きな槍でUnityちゃんを刺してくる。</p>
                     
                 </div>
@@ -128,12 +132,14 @@
             <div class="enemy_stack">
                 <div class="enemy">
                 <h3>くじらお化け</h3>
+                <img src="{{asset('/img/whale.png')}}" alt="くじらお化け">
                 <p>迷路の中で1，2を争う強敵。死んだくじらがその怨念で歩み寄り、しつこくUnityuちゃんを追ってくる。</p>
                     
                 </div>
                 
                 <div class="enemy">
-                <h3>闇狼</h3>
+                <h3>やみのおおかみ</h3>
+                <img src="{{asset('/img/darkwlof.png')}}" alt="くじらお化け">
                 <p>迷路の中で1，2を争う強敵。圧倒的な食い付きよる攻撃Unityちゃんを激しく攻撃する。                巨大な邪悪の力と攻撃力でUnityちゃんに襲い掛かる。</p>
                     
                 </div>
@@ -141,6 +147,7 @@
             <div class="enemy_stack">
                 <div class="enemy">
                 <h3>？？？</h3>
+               <img src="{{asset('/img/mmm.png')}}" alt="？？？">
                 <p>迷路の奥に待ち受ける。不思議迷路の主。
                 巨大な邪悪の力と攻撃力でUnityちゃんに襲い掛かる。</p>
                     
@@ -156,37 +163,45 @@
 
             <div class="stage_stack">
                 <div class="stage">
-                    Game開始
+                    <h4>Game開始</h4>
+                   <img src="{{asset('/img/s_start.png')}}" alt="Game開始">
                 </div>
                 <div class="stage">
-                    敵が不思議な小判を落とす。
-                </div>
-            </div>
-
-            <div class="stage_stack">
-                <div class="stage">
-                    血の池
-                </div>
-                <div class="stage">
-                    神社が各領域の境目
+                    <h4>敵が不思議な小判を落とす<h4>
+                   <img src="{{asset('/img/s_coin_heart.png')}}" alt="敵が不思議な小判を落とす">
                 </div>
             </div>
 
             <div class="stage_stack">
                 <div class="stage">
-                    宝箱をGetしていこう！！
+                    <h4>きょ大な壁</h4>
+                   <img src="{{asset('/img/s_wall.png')}}" alt="巨大な壁">
                 </div>
                 <div class="stage">
-                    巨大鉄球がUnityちゃんに邪魔をする
+                    <h4>神社が各領域の境目</h4>
+                   <img src="{{asset('/img/s_shrine.png')}}" alt="神社の場面">
                 </div>
             </div>
 
             <div class="stage_stack">
                 <div class="stage">
-                    容赦なく攻撃してくるようかい達
+                    <h4>宝箱をGetしていこう！！</h4>
+                   <img src="{{asset('/img/s_takarabox.png')}}" alt="妖怪達">
                 </div>
                 <div class="stage">
-                    幻想的な桜空間の迷路
+                    <h4>きょ大鉄球がUnityちゃんにせまる！</h4>
+                   <img src="{{asset('/img/s_ironball.png')}}" alt="妖怪達">
+                </div>
+            </div>
+
+            <div class="stage_stack">
+                <div class="stage">
+                    <h4>はげしくこうげきするようかい達</h4>
+                   <img src="{{asset('/img/s_enemy.png')}}" alt="妖怪達">
+                </div>
+                <div class="stage">
+                    <h4>げん想的な桜空間の迷路</h4>
+                   <img src="{{asset('/img/s_sakura.png')}}" alt="妖怪達">
                 </div>
             </div>
 

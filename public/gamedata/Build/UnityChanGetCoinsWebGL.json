@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "UnityChan_GetCoins_Project",
+"productVersion": "0.1",
+"dataUrl": "UnityChanGetCoinsWebGL.data.unityweb",
+"wasmCodeUrl": "UnityChanGetCoinsWebGL.wasm.code.unityweb",
+"wasmFrameworkUrl": "UnityChanGetCoinsWebGL.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.18f1"
+}

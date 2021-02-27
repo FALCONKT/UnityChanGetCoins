@@ -28,8 +28,9 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 // LogInしている場合のみ使用出来る関数指定
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController', ['only' => ['show']]);
-});
+    Route::resource('gamedata', 'UsersController', ['only' => ['index']]);
 
+});
 
 // 問い合わせ関連
 Route::get('/', 'ContactsController@index');
