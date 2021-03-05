@@ -5,6 +5,9 @@ body{
     width: 100%;
 }
 
+img{
+    width: 100%;
+}
 p{
     font-size: 16px;
     font-weight: bolder;
@@ -16,32 +19,32 @@ li{
     line-height: 24px;
 }
 
+
 @font-face {
   font-family: 'MyFont';
   src: url("/data/g_comichorrorR_freeR.ttf");
     /*src: url("file:///C:/Windows/Fonts/KozMinPro-Regular.otf");*/
 }
 
+div#logo_part{
+    width: 100%;
+}
 
-div#logo_part img#logo{
-    width: 50%;
-    display: block;
-    margin: 1.5% 0 1.5% 5%;
+div#logo_part h1{
+    width: 100%;
 }
-div#logo_part img#sublogo{
-    width: 40%;
+
+
+div#logo_part img{
+width: 100%;
     display: block;
-    margin: 1.5% 0 1.5% 10%;
+    margin: 5% 0 0 5;
 }
+
 
 @media screen and (max-width: 768px){
 div#logo_part img#logo{
     width: 80%;
-    margin: 1.5% auto;
-}
-div#logo_part img#sublogo{
-    width: 60%;
-    margin: 1% ;
     margin: 1.5% auto;
 }
 }
@@ -52,55 +55,64 @@ div#logo_part img#logo{
     display: block;
     margin: 1.5% auto;
 }
-
-div#logo_part img#sublogo{
-    width: 60%;
-    display: block;
-    margin: 1.5% auto;
-    text-align: center;
 }
-
-}
-
-
 
 ul.navbar-nav{
-    margin: 1.5% 0% 1.5% 0%;
+    margin:1% 0% 1% 0%;
+    width: 52.5%;
 }
 ul.navbar-nav li.nav-item{
-    font-size: 22px;
-    margin: 1% 0% 1% 5%;
+    font-size: 20px;
+    margin: 0 0px 0 10%;
     font-family: "MyFont","serif";
     font-weight: bolder;
     text-align: center;
-}
-.navbar-dark .navbar-nav .nav-link{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
     color:#D94047 !important;
-  text-shadow:1px 1px 0px white;
+    text-shadow:1px 1px 0px white;
+    border-left: 4px double;
+    padding-left: 6px;
+}
+ul.navbar-nav li.nav-item a{
+    text-decoration: none;
+    color:#D94047 !important;
+    text-shadow:1px 1px 0px white;
+}
+ul.navbar-nav li.nav-item a:hover{
+    opacity: 0.5;
 }
 
+.navbar-dark .navbar-nav .nav-link{
+    color:#D94047 !important;
+    text-shadow:1px 1px 0px white;
+}
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    margin-right: 0%;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+a.navbar-brand {
+    width: 90%;
+}
+@media (min-width: 576px){
+.navbar-expand-sm .navbar-collapse {
+    width: 100%;
+}
+}
 
 h2{
     font-size: 40px;
     font-family: "MyFont","serif";
     font-weight: bolder;
-    margin: 4% auto 2%;
+    margin: 1% auto 2%;
     color:#D94047;
     text-align: center;
 }
-
-
-div.set{
-   display: flex; 
-}
-
-#unitychan img{
-    width: 40%;
-    margin-left: 0%;
-    margin-right: 2.5%;
-}
-
-
 h3{
     font-size: 25px;
     font-family: "MyFont","serif";
@@ -108,7 +120,6 @@ h3{
     margin: 4% 0% 2% 0%;
     color:#D94047;
 }
-
 h4{
     font-size: 20px;
     font-family: "MyFont","serif";
@@ -119,54 +130,51 @@ h4{
     margin:2% 0% 0.5% 5%;
 }
 
-/*TOP親*/
-div#top_Image{
-    position: absolute;
-    right: 0;
-    left: 0;
-    top:6%;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	z-index: -100;
-    display: block;
-}
 
+/*TOP親*/
+div.container{
+    position: static;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    z-index: -1000 !important;
+}
+/*TOP親*/
 div#top_Image video{
     position: relative;
     right: 0;
     left: 0;
     top:0;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-     background-size: cover;
-    /*background: url('poster.jpg') no-repeat;*/
-}
-
-
-div.text-center.topButton{
+    min-width: 100%;
+    min-height: 100%;
+    width: 99vw;
+    z-index: -150;
     /*display: block;*/
+    min-height: 100vh;
+    border-bottom: 15px double #D94047;
 }
+
 
 
 /*会員Button*/
 /* 画像のサイズ指定 */
-div#top_Image div .MemberpButton{
+div#top_Image .MemberpButton{
     position: absolute;/*必須*/
     display: block;/*必須*/
+
     background: url(/img/member.png) no-repeat;
     width: 100%;
     height: 100%;
-    z-index: 100;/*必須*/
-    /* justify-content: center; */
-    /* align-items: center; */
+    z-index: 150;/*必須*/
     text-align: center;
     /* margin: auto; */
-    top: 25%;
-    right: 37%;
-    left: 37%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    
 }
 /* 基本設定 */
 .MemberpButton{
@@ -174,27 +182,30 @@ div#top_Image div .MemberpButton{
 }
 /* マウスを乗せたときの動き */
 .MemberpButton:hover{
-  opacity: 0.6;
-  transition: 0.8s;
+  opacity: 0.3;
+  transition: 0.4s;
 }
 
 
 /*LogInButton*/
 /* 画像のサイズ指定 */
-div#top_Image div .SignUpButton{
-    position: absolute;/*必須*/
-    display: block;/*必須*/
+div#top_Image .SignUpButton{
+    position: absolute;
+    display: block;
     background: url(/img/signupplay.png) no-repeat;
-    width: 400px;
+    width: 350px;
     height: 100px;
-    z-index: 100;/*必須*/
-    /* justify-content: center; */
-    /* align-items: center; */
+    z-index: 150;
     text-align: center;
-    /* margin: auto; */
-    top: 25%;
-    right: 32.5%;
+    margin: auto; 
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
 }
+
+
 /* 基本設定 */
 .SignUpButton{
   border-style: none;
@@ -205,26 +216,27 @@ div#top_Image div .SignUpButton{
   transition: 0.8s;
 }
 
-
-
 /*既存CSS上書き*/
 div.jumbotron{
    padding: 0rem 2.5rem; 
    background-color:#d8d0c5;
 }
 
-
-
 div#all_rapp{
     position: absolute;
-    top: 110%;
+    top: 135%;
     right: 16%;
     left: 16%;
+    margin-bottom: 15%;
 }
 
+
+
+/*記事*/
 div.intro p{
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
+    line-height: 32px;
     font-family: "MyFont","serif";
     font-weight: bolder;
     margin: 1% 0% 1% 0%;
@@ -233,8 +245,8 @@ div.intro p{
 
 section#videozone video{
     display: block;
-    width: 90%;
-    margin: 5% auto;
+    width: 60%;
+    margin: 5% auto 7%;
 }
 
 @media screen and (max-width: 480px){
@@ -245,6 +257,47 @@ section#videozone video{
 }
 }
 
+div.desc{
+    margin-bottom: 7%;
+}
+
+div.desc p{
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: normal;
+    text-align: center
+}
+
+
+div.set{
+   display: flex;
+    justify-content:space-around;
+    margin: 0% 15%;
+}
+div.unitychan_img img{
+    width: 70%;
+    margin-left:5%;
+    margin-right: 10%;
+}
+div.desc.unity p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+    text-align: left;
+}
+
+ul.gamesystem{
+    text-align: center;
+    margin: 2.5% auto 5%;
+}
+ul.gamesystem li{
+    font-weight: bolder;
+    font-size:20px;
+    line-height: 50px;
+    display: block;
+} 
+
+
 
 div.form-group label{
     font-size: 25px;
@@ -254,14 +307,102 @@ div.form-group label{
     color:#D94047; 
 }
 
+div.enemy_stack{
+    display: flex;
+    justify-content:space-around;
+    margin: 5%;
+}
+
+div.enemy{
+    display: flex;
+    justify-content:space-between;
+    margin: 1.5% 3%;
+}
+div.enemy h3{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+div.enemy img{
+    width: 13vw;
+    height: 13vw;
+    margin: 3%;
+}
+div.enemy div.enemy_desc{
+    width: 13vw;
+}
+
+
+/*Boss*/
+div.enemy_boss{
+}
+div.enemy_boss h3{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+div.enemy_boss img{
+    width: 24vw;
+    height: 24vw;
+    margin: 5%;
+}
+div.enemy_boss div.enemy_desc{
+    width: 24vw;
+}
+
+/*Stage画像*/
+
+div#stage_slider{
+    display: block;
+}
+
+div#display_img{
+  width: 80%;
+  margin: 5% auto;
+}
+
+ul#list_img{
+width: 88%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2.5% 4%;
+}
+ul#list_img li{
+    width: 21%;
+    margin: 2%;
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    
+}
+ul#list_img h3{
+    font-size: 18px;
+    height: 50px;
+}
+ul#list_img img{
+    width: 100%; 
+}
+ul#list_img img:hover{
+    opacity:0.5;
+}
+section#stage{
+    margin-bottom: 5%;
+}
+
+
+/*お問い合わせ*/
+div.panel-body{
+  margin: 2% 15%;  
+}
+div.form-group div.col-sm-10 {
+    max-width: 100%;
+}
+
 label{
     display:inline;
 }
-
 label .checkbox-inline{
     display:inline;
 }
-
 input.form-control{
     border:1.5px solid #e20000;
 }
@@ -269,10 +410,42 @@ textarea.form-control{
     border:1.5px solid #e20000;
 }
 
+
+
+/*LogIn先*/
 div.gamebanner img{
     width:100%;
     margin-top:2.5%;
 }
 div.gamebanner img:hover{
     opacity:0.5;
+}
+
+#pagetop a{
+    position: fixed;
+    bottom:15%;
+    left:10%;
+    border-radius: 50%;
+    background-color:#D94047;
+    padding: 2.5%;
+    color:white;
+    height: 10%;
+    width: 6%;
+    font-size: 40px;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+footer{
+    width: 100%;
+    background-color: #D94047;
+    position: absolute;
+    /*!!!!!!!!!!!!!!!!!!!!!    */
+    bottom: -6200px !important;
+    height: 150px;
+    text-align: center;
+    color: white;
+    padding-top: 3%;
 }

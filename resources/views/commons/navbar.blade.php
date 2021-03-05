@@ -1,20 +1,20 @@
 <header class="mb-4">
     <nav id="navin" class="navbar navbar-expand-sm navbar-dark bg-dark">
+        
         {{-- トップページへのリンク --}}
-        <h1>
-        <a class="navbar-brand" href="/">
         <div id="logo_part">
-            <img id="logo" src="{{asset('/img/Title.png')}}" alt="Unityちゃんと不思議な小判">
+            <h1>
+                <a class="navbar-brand" href="/">
+                <img id="logo" src="{{asset('/img/Title.png')}}" alt="Unityちゃんと不思議な小判">
+                </a>
+            </h1>
         </div>
-        </a>
-        </h1>
         
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="nav-bar">
-            <ul class="navbar-nav mr-auto"></ul>
             <ul class="navbar-nav">
  
                  @if (Auth::check())
@@ -32,12 +32,21 @@
                     </li>
                 @else
 
+                    <li class="nav-item"><a href="/">TOPへ</a></li>
+                    <li class="nav-item"><a href="/#intro">導　　入</a></li>
+                    <li class="nav-item"><a href="/#story">説　　話</a></li>
+                    <li class="nav-item"><a href="/#unitychan">Unityちゃん</a></li>
+                    <li class="nav-item"><a href="/#game">Gameのとくちょー</a></li>
+                    <li class="nav-item"><a href="/#enemy">じごく迷路のようかい達</a></li>
+                    <li class="nav-item"><a href="/#stage">じごく迷路の場面</a></li>
+                    <li class="nav-item"><a href="/#toi">お問い合わせ</a></li>
+
+
                     {{-- ユーザ登録ページへのリンク --}}
                     <li class="nav-item">{!! link_to_route('signup.get', 'Signup', [], ['class' => 'nav-link']) !!}</li>
                     {{-- ログインページへのリンク --}}
                     <li class="nav-item">{!! link_to_route('login', 'Login', [], ['class' => 'nav-link']) !!}</li>
 
-            
                 @endif
 
             </ul>
