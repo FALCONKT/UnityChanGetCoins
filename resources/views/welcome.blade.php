@@ -30,21 +30,15 @@
     
     
     <div id="all_rapp" class="center jumbotron">
+        
+        <section id="story">
+            
+        <h2 id="storyhead">導　入　説　話</h2>
 
-        <section id="videozone">
-        <h2 id="intro">導　　入</h2>
             <div class="intro">
             <p>敵を殺し 小判を手に入れ</p>
             <p>はいすこあを 目指せ!!</p>
             </div>
-            <!--動画-->
-            <video src="{{asset('/data/Video_01.mp4')}}" loop autoplay muted playsinline></video>
-        </section>
-
-
-        <section id="story">
-
-            <h2 id="story">説　　話</h2>
            
            <div class="desc"> 
             <p>飛び散る血液、上からもぎ取られる頭、容赦なく引き裂かれる肉体……<br>
@@ -58,7 +52,10 @@
             <br>
             まさに「血みどろの殺るが先か、殺られるが先か。」の生と死を分けたDeath(殺し合い)ゲームが始まる。</p>
             </div>
-            
+    
+            <!--動画-->
+            <video src="{{asset('/data/Video_01.mp4')}}" loop autoplay muted playsinline></video>
+
         </section>
 
         <section id="unitychan">
@@ -85,6 +82,8 @@
         <section id="game_disc">
             
             <h2 id="game">Gameのとくちょー </h2>
+
+        <div class="game_ul_img">
             
             <ul class="gamesystem">
                 <li>不思議で和風な世界観の巨大な迷路攻略</li>
@@ -95,16 +94,23 @@
                 <li>得点加算で高得点を狙え。全Userと得点を競える！！</li>
             </ul>
             
+            <div class="coin_img">
+                <img src="{{asset('/img/coin.png')}}" alt="coins">
+            </div>
+        </div>
+            
         </section>
 
         <section id="youkai">
-            <h2 id="enemy">じごく迷路のようかい達</h2>
+            <h2 id="enemy">じごく迷路のようかい</h2>
             <div class="enemy_stack">
                 
                 <div class="enemy">
                     <h3>すらいむ</h3>
                  
+                    <div class="enemy_img_zone">
                     <img src="{{asset('/img/slime.png')}}" alt="すらいむ">
+                    </div>
 
                     <div class="enemy_desc">
                     <p>敵といえば、最初は正にすらいむ！大きいものや小さいものまで幅広く存在する。ときに仲間になることもある。</p>
@@ -114,7 +120,9 @@
                 <div class="enemy">
                     <h3>豆おに</h3>
 
+                    <div class="enemy_img_zone">
                     <img src="{{asset('/img/demonbox.png')}}" alt="豆鬼">
+                    </div>
 
                     <div class="enemy_desc">
                     <p>箱型の小型の鬼。小さいからといって侮れない。しつこく食いついてくる。</p>
@@ -128,7 +136,9 @@
                 <div class="enemy">
                     <h3>どくろMan</h3>
                     
+                    <div class="enemy_img_zone">
                     <img src="{{asset('/img/skelton.png')}}" alt="どくろMan">
+                    </div>
         
                     <div class="enemy_desc">
                     <p>迷路で死んだ旅人のなれの果て。化けて迷路に迷い込むものに襲い掛かる。</p>
@@ -138,7 +148,9 @@
                 <div class="enemy">
                     <h3>河童</h3>
 
+                    <div class="enemy_img_zone">
                     <img src="{{asset('/img/kappa.png')}}" alt="河童">
+                    </div>
         
                     <div class="enemy_desc">
                     <p>地獄迷路の血の池周辺に頻出する水性のお化け。大きな槍でUnityちゃんを刺してくる。</p>
@@ -149,10 +161,12 @@
             
             <div class="enemy_stack">
                 
-                <div class="enemy">
+                <div id="bigWhale" class="enemy">
                     <h3>くじらお化け</h3>
                     
+                    <div class="enemy_img_zone">
                     <img src="{{asset('/img/whale.png')}}" alt="くじらお化け">
+                    </div>
                     
                     <div class="enemy_desc">
                     <p>迷路の中で1，2を争う強敵。死んだくじらがその怨念で歩み寄り、しつこくUnityuちゃんを追ってくる。</p>
@@ -161,9 +175,16 @@
                 
                 <div class="enemy">
                     <h3>やみのおおかみ</h3>
-                    <img src="{{asset('/img/darkwlof.png')}}" alt="くじらお化け">
+
+                    <div class="enemy_img_zone">
+                    <img src="{{asset('/img/darkwlof.png')}}" alt="やみのおおかみ">
+                    </div>
+                    
+                    <div class="enemy_desc">
                     <p>迷路の中で1，2を争う強敵。圧倒的な食い付きよる攻撃Unityちゃんを激しく攻撃する。
                     巨大な邪悪の力と攻撃力でUnityちゃんに襲い掛かる。</p>
+                    </div>
+                    
                 </div>
 
             </div>
@@ -186,7 +207,7 @@
         </section>
 
         <section id="stage">
-            <h2 id="stage">じごく迷路の場面</h2>
+            <h2 id="stage">じごく迷路</h2>
   
             <div id="stage_slider">
                 <div id="display_img"><img src="{{asset('/img/1.png')}}" alt="Game開始"></div>
@@ -198,7 +219,7 @@
                     <li><h3>神社が各領域の境目</h3><img src="{{asset('/img/4.png')}}" alt=""></li>
                     <li><h3>はげしくこうげきするようかい達</h3><img src="{{asset('/img/5.png')}}" alt=""></li>
                     <li><h3>げん想的な桜空間の迷路</h3><img src="{{asset('/img/6.png')}}" alt=""></li>
-                    <li><h3>宝箱をGetしていこう！！</h3><img src="{{asset('/img/7.png')}}" alt=""></li>
+                    <li><h3>宝箱をGetしていこう！</h3><img src="{{asset('/img/7.png')}}" alt=""></li>
                     <li><h3>きょ大鉄球がUnityちゃんにせまる！</h3><img src="{{asset('/img/8.png')}}" alt=""></li>
                 </ul>
             </div>
@@ -209,7 +230,7 @@
         <section>
         <!--お問い合わせForm-->
         <div id="contactform" class="panel panel-default">
-            <div class="panel-heading">
+            <div id="toihead" class="panel-heading">
                 <h2 id="toi">お問い合わせ</h2>
             </div>
             
@@ -319,7 +340,7 @@
 
                 <div class="form-group">
                     <div class="col-sm-10 col-sm-offset-2">
-                        {!! Form::submit('確認', ['class' => 'btn btn-primary']) !!}
+                        {!! Form::submit('', ['class' => 'submitbuton btn btn-primary']) !!}
                     </div>
                 </div>
 
@@ -340,7 +361,7 @@
     </div>
      <!--id="all_rapp" END-->
 
-<footer>
+<footer id="topheader">
 <p>©2021 C&C Inc TaemC All right All Rights Researved.</p>
 </footer>
      

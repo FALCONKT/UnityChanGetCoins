@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content_2')
     <div class="text-center">
         <h2>Sign up</h2>
     </div>
@@ -29,8 +29,12 @@
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
 
-                {!! Form::submit('Sign up', ['class' => 'btn btn-primary btn-block']) !!}
+                {!! Form::submit('Sign up', ['class' => 'SighnupButton']) !!}
             {!! Form::close() !!}
         </div>
     </div>
 @endsection
+
+    <footer>
+    <p>©2021 C&C Inc TaemC All right All Rights Researved.</p>
+    </footer>

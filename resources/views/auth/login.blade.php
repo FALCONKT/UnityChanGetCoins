@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content_2')
     <div class="text-center">
         <h2>Log in</h2>
     </div>
@@ -19,7 +19,7 @@
                     {!! Form::password('password', ['class' => 'form-control']) !!}
                 </div>
 
-                {!! Form::submit('Log in', ['class' => 'btn btn-primary btn-block']) !!}
+                {!! Form::submit('Log in', ['class' => 'LogInButton']) !!}
             {!! Form::close() !!}
 
             {{-- ユーザ登録ページへのリンク --}}
@@ -28,4 +28,12 @@
 
         </div>
     </div>
+
+
+    
 @endsection
+
+
+    <footer>
+    <p>©2021 C&C Inc TaemC All right All Rights Researved.</p>
+    </footer>

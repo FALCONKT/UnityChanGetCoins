@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+@section('content_2')
  
 <div class="container">
     <div class="row">
@@ -20,3 +20,7 @@
     </div>
 </div>
 @endsection
+
+    <footer>
+    <p>©2021 C&C Inc TaemC All right All Rights Researved.</p>
+    </footer>

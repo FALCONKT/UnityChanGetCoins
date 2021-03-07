@@ -24,12 +24,18 @@
 
             @yield('content')
 
+
+        </div>
+        
+        <div class="container_2">
+
+            @yield('content_2')
+
         </div>
 
-        @include('commons.footer')
     </header>
 
-    
+
 
         {{--JQ--}}
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

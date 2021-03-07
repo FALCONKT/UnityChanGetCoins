@@ -1,8 +1,14 @@
 @charset "utf-8";
 
 body{
+    /*background:url(/img/blood.png) repeat;*/
     background-color: #343a40;
     width: 100%;
+}
+
+header{
+     position:static ;
+     bottom: 0;
 }
 
 img{
@@ -18,7 +24,14 @@ li{
     font-weight: bolder;
     line-height: 24px;
 }
-
+/*Reset*/
+.navbar{
+   padding: 0rem 0rem;
+   border-bottom: 15px double #D94047;
+}
+.mb-4, .my-4 {
+    margin-bottom: 0 important;
+}
 
 @font-face {
   font-family: 'MyFont';
@@ -42,14 +55,9 @@ width: 100%;
 }
 
 
-@media screen and (max-width: 768px){
-div#logo_part img#logo{
-    width: 80%;
-    margin: 1.5% auto;
-}
-}
 
-@media screen and (max-width: 480px){
+
+@media screen and (max-width: 550px){
 div#logo_part img#logo{
     width: 100%;
     display: block;
@@ -59,25 +67,25 @@ div#logo_part img#logo{
 
 ul.navbar-nav{
     margin:1% 0% 1% 0%;
-    width: 52.5%;
+    width: 45%;
 }
 ul.navbar-nav li.nav-item{
-    font-size: 20px;
-    margin: 0 0px 0 10%;
+    font-size: 25px;
+    margin: 0;
     font-family: "MyFont","serif";
     font-weight: bolder;
     text-align: center;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    color:#D94047 !important;
-    text-shadow:1px 1px 0px white;
-    border-left: 4px double;
-    padding-left: 6px;
+    color: #D94047 !important;
+    /*text-shadow: 1px 1px 0px white;*/
+    /* border-left: 0px double; */
+    padding-left: 12%;
 }
 ul.navbar-nav li.nav-item a{
     text-decoration: none;
     color:#D94047 !important;
-    text-shadow:1px 1px 0px white;
+    /*text-shadow:1px 1px 0px white;*/
 }
 ul.navbar-nav li.nav-item a:hover{
     opacity: 0.5;
@@ -85,7 +93,7 @@ ul.navbar-nav li.nav-item a:hover{
 
 .navbar-dark .navbar-nav .nav-link{
     color:#D94047 !important;
-    text-shadow:1px 1px 0px white;
+    /*text-shadow:1px 1px 0px white;*/
 }
 .navbar-brand {
     display: inline-block;
@@ -99,10 +107,63 @@ ul.navbar-nav li.nav-item a:hover{
 a.navbar-brand {
     width: 90%;
 }
-@media (min-width: 576px){
 .navbar-expand-sm .navbar-collapse {
     width: 100%;
 }
+/*980～550*/
+@media (max-width: 980px){
+.navbar{
+    display: block;
+}
+div#logo_part img{
+    width: 75%;
+    margin:2.5% 15%;
+    display: block;
+}
+ul.navbar-nav {
+    margin: 0 0 4% 0;
+    width: 100%;
+    display: flex;
+}
+ul.navbar-nav li.nav-item{
+    padding-left: 4%;
+    padding-right: 3%;
+    font-size: 20px;
+}
+
+
+
+}
+
+
+@media (max-width: 576px){
+    .navbar-toggler {
+        padding: 0.5rem 1.25rem;
+        font-size: 2rem;
+        line-height: 2;
+        background-color: transparent;
+        /* border: 1px solid transparent; */
+        border-radius: .25rem;
+    }
+    ul.navbar-nav li.nav-item{
+    margin: 0;
+        font-family: "MyFont","serif";
+        font-weight: bolder;
+        text-align: center;
+        writing-mode: horizontal-tb;
+        text-orientation: upright;
+        color: #D94047 !important;
+    }
+    ul.navbar-nav li.nav-item{
+        padding-top: 3%;
+        padding-bottom: 3%;
+        font-size: 22px;
+    }
+    .navbar-dark .navbar-toggler {
+        color: rgba(255,255,255,.5);
+        border: 5px solid #cd1d26;
+    }
+
 }
 
 h2{
@@ -131,7 +192,7 @@ h4{
 }
 
 
-/*TOP親*/
+/*TOP親　共通*/
 div.container{
     position: static;
     padding-right: 0;
@@ -139,42 +200,76 @@ div.container{
     margin-right: 0;
     margin-left: 0;
     z-index: -1000 !important;
+    display: container;
 }
+
+div.container_2{
+    position: static;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 20%;
+    margin-left: 20%;
+    z-index: -1000 !important;
+}
+
+
 /*TOP親*/
 div#top_Image video{
     position: relative;
     right: 0;
     left: 0;
-    top:0;
+    top:-50px;
     min-width: 100%;
     min-height: 100%;
-    width: 99vw;
+    width: 100vw;
     z-index: -150;
     /*display: block;*/
     min-height: 100vh;
     border-bottom: 15px double #D94047;
 }
-
-
-
+@media (max-width:1280px){
+div#top_Image video{
+    top:-275px;
+}
+}
+@media (max-width:768px){
+div#top_Image video{
+    top:-250px;
+}
+}
+@media (max-width:550px){
+div#top_Image video{
+    top:-275px;
+}
+}
 /*会員Button*/
 /* 画像のサイズ指定 */
 div#top_Image .MemberpButton{
     position: absolute;/*必須*/
     display: block;/*必須*/
-
     background: url(/img/member.png) no-repeat;
-    width: 100%;
-    height: 100%;
+    width: 350px;
+    height: 100px;
     z-index: 150;/*必須*/
     text-align: center;
-    /* margin: auto; */
-    top: 50%;
+    margin: auto; 
+    top: 40%;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    
+}
+@media (max-width: 980px){
+div#top_Image .MemberpButton{
+    position: absolute;/*必須*/
+    top:105%;
+}
+}
+@media (max-width: 550px){
+div#top_Image .SignUpButton{
+    position: MemberpButton;/*必須*/
+    top:65%;
+}
 }
 /* 基本設定 */
 .MemberpButton{
@@ -204,6 +299,18 @@ div#top_Image .SignUpButton{
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
 }
+@media (max-width: 980px){
+div#top_Image .SignUpButton{
+    position: absolute;/*必須*/
+    top:102%;
+}
+}
+@media (max-width: 550px){
+div#top_Image .SignUpButton{
+    position: absolute;/*必須*/
+    top:70%;
+}
+}
 
 
 /* 基本設定 */
@@ -219,7 +326,7 @@ div#top_Image .SignUpButton{
 /*既存CSS上書き*/
 div.jumbotron{
    padding: 0rem 2.5rem; 
-   background-color:#d8d0c5;
+   background-color:#e0d0ba;
 }
 
 div#all_rapp{
@@ -228,29 +335,49 @@ div#all_rapp{
     right: 16%;
     left: 16%;
     margin-bottom: 15%;
+    padding-top: 3%;
 }
-
+@media (max-width: 980px){
+div#all_rapp{
+    position: absolute;
+    top: 127%;
+    right: 4%;
+    left: 4%;
+    margin-bottom: 15%;
+    padding-top: 5%;
+    padding-bottom: 7.5%;
+}
+}
+@media (max-width: 550px){
+div#all_rapp {
+    position: absolute;
+    top: 100%;
+}
+}
 
 
 /*記事*/
+div.intro{
+    margin: 5% 0% 3% 0%;
+}
 div.intro p{
     text-align: center;
-    font-size: 24px;
-    line-height: 32px;
+    color:#D94047; 
+    font-size: 27px;
+    line-height: 33px;    
     font-family: "MyFont","serif";
     font-weight: bolder;
-    margin: 1% 0% 1% 0%;
-    color:#D94047; 
 }
 
-section#videozone video{
+
+section#story video{
     display: block;
     width: 60%;
-    margin: 5% auto 7%;
+    margin: 3% auto 7%;
 }
 
-@media screen and (max-width: 480px){
-section#videozone video{
+@media screen and (max-width: 550px){
+section#story video{
     display: block;
     width: 100%;
     margin: 5% auto;
@@ -258,13 +385,13 @@ section#videozone video{
 }
 
 div.desc{
-    margin-bottom: 7%;
+    margin-bottom: 3%;
 }
 
 div.desc p{
     font-size: 16px;
-    line-height: 27px;
-    font-weight: normal;
+    line-height: 24px;
+    font-weight: bolder;
     text-align: center
 }
 
@@ -276,19 +403,35 @@ div.set{
 }
 div.unitychan_img img{
     width: 70%;
-    margin-left:5%;
-    margin-right: 10%;
+    margin-left: 8%;
+    margin-right: 5%;
 }
 div.desc.unity p{
     font-size: 16px;
     line-height: 24px;
-    font-weight: normal;
+    font-weight: bolder;
     text-align: left;
+    margin-top: 30%;
+}
+
+section#game_disc{
+}
+
+div.game_ul_img{
+    display: flex;
+    justify-content:space-between;
+}
+@media screen and (max-width: 980px){
+div.game_ul_img{
+    display: block;
+    justify-content: space-between;
+}
 }
 
 ul.gamesystem{
     text-align: center;
     margin: 2.5% auto 5%;
+    width: 60%
 }
 ul.gamesystem li{
     font-weight: bolder;
@@ -296,65 +439,141 @@ ul.gamesystem li{
     line-height: 50px;
     display: block;
 } 
-
-
-
-div.form-group label{
-    font-size: 25px;
-    font-family: "MyFont","serif";
+div.coin_img{
+    margin-top: 6%;
+     width: 40%; 
+}
+@media screen and (max-width: 980px){
+ul.gamesystem {
+    text-align: center;
+    margin: 3% auto 5%;
+    width: 90%;
+}
+ul.gamesystem li{
     font-weight: bolder;
-    margin: 4% 0% 2% 0%;
-    color:#D94047; 
+    font-size:18px;
+    line-height: 36px;
+    display: block;
+}
+div.coin_img{
+    margin: 5% 4% 15% 20%;
+    width: 50%; 
+}
 }
 
 div.enemy_stack{
     display: flex;
     justify-content:space-around;
-    margin: 5%;
+    margin: 3% auto;
+    width: 100%;
 }
 
 div.enemy{
     display: flex;
     justify-content:space-between;
-    margin: 1.5% 3%;
+    margin: 1% 4%;
+    width: 100%;
 }
 div.enemy h3{
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
+div.enemy_img_zone{
+    width: 13vw;
+    height: fit-content;
+    display: block;
+}
+/*特別*/
+div#bigWhale div.enemy_img_zone img{
+    width: 26vw;
+}
+
 
 div.enemy img{
-    width: 13vw;
-    height: 13vw;
+    width: 100%;
+    height: 100%;
     margin: 3%;
 }
+
 div.enemy div.enemy_desc{
     width: 13vw;
 }
+div.enemy div.enemy_desc p{
+    margin: 80% 0 0 8%;
+    width: 13vw;
+}
+/*特別*/
+div#bigWhale div.enemy_desc p{
+    margin: 5% 0 0 16%;
+}
+
+@media screen and (max-width: 980px){
+div.enemy_stack{
+    display: block;
+    margin: 5% auto;
+    width: 100%;
+}
+div.enemy_img_zone{
+    width: 20vw;
+    height: fit-content;
+}
+div#bigWhale div.enemy_img_zone img {
+    width: 46vw;
+}
+div.enemy div.enemy_desc{
+    display: block;
+    width: 40vw;
+}  
+div.enemy div.enemy_desc p{
+    margin:20% 0 0 2%;
+    width: 90%;
+}
+div#bigWhale div.enemy_desc p{
+    margin: 5% 0 0 16%;
+}
+div#bigWhale div.enemy_desc p{
+    margin: 0 0 0 7%;
+}
+}
+
 
 
 /*Boss*/
 div.enemy_boss{
+    display: flex;
+    justify-content:space-between;
 }
 div.enemy_boss h3{
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
 div.enemy_boss img{
-    width: 24vw;
+    width: 35vw;
     height: 24vw;
     margin: 5%;
 }
 div.enemy_boss div.enemy_desc{
-    width: 24vw;
+    width: 20vw;
+}
+div.enemy_boss div.enemy_desc p{
+    margin-top: 50%;
+}
+@media screen and (max-width: 980px){
+div.enemy_boss img{
+    width: 50vw;
+    height: auto;
+    margin: 2%;
+}
+    
 }
 
-/*Stage画像*/
 
+
+
+/*Stage画像*/
 div#stage_slider{
     display: block;
 }
-
 div#display_img{
   width: 80%;
   margin: 5% auto;
@@ -387,9 +606,39 @@ ul#list_img img:hover{
 section#stage{
     margin-bottom: 5%;
 }
-
+@media screen and (max-width: 980px){
+div#display_img{
+  width: 95%;
+  margin: 2,5% auto;
+}
+ul#list_img{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+ul#list_img h3{
+    font-size: 16px;
+    height: 55px;
+}
+ul#list_img li{
+    width: 22%;
+    margin: 1.5%;
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+}    
+    
+}
 
 /*お問い合わせ*/
+div.form-group label{
+    font-size: 25px;
+    font-family: "MyFont","serif";
+    font-weight: bolder;
+    margin: 4% 0% 2% 0%;
+    color:#D94047; 
+}
+
 div.panel-body{
   margin: 2% 15%;  
 }
@@ -410,7 +659,37 @@ textarea.form-control{
     border:1.5px solid #e20000;
 }
 
+/*Resee Button*/
+div.form-group .submitbuton.btn-primary{
+    position: relative;
+    display: block;
+    background: url(/img/resee.png) no-repeat;
+    width: 350px;
+    height: 100px;
+    z-index: 150;
+    text-align: center;
+    margin: 0px 50%; 
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    border:none !important;
+}
+div.form-group .submitbuton.btn-primary:hover{
+    opacity: 0.5;
+}
 
+span.help-block{
+     color:red;   
+}
+@media screen and (max-width: 980px){
+div.panel-body{
+  margin: 5% 5%;  
+}
+div#toihead.panel-heading{
+    margin:0 0 10% 0%;
+}
+
+}
 
 /*LogIn先*/
 div.gamebanner img{
@@ -423,29 +702,133 @@ div.gamebanner img:hover{
 
 #pagetop a{
     position: fixed;
-    bottom:15%;
-    left:10%;
+    bottom: 22%;
+    left: 2.5%;
     border-radius: 50%;
-    background-color:#D94047;
-    padding: 2.5%;
-    color:white;
-    height: 10%;
-    width: 6%;
-    font-size: 40px;
-    color:white;
+    background-color: #D94047;
+    /* padding: 5% 6%; */
+    color: white;
+    height: 20%;
+    width: 12%;
+    font-size: 7vw;
+    color: white;
     text-decoration: none;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: bottom;
+    z-index: 1000;
+}
+@media screen and (max-width: 980px){
+#pagetop a{
+    height: 10%;
+    width: 12%;
+    
+}
+}
+@media screen and (max-width: 550px){
+#pagetop a{
+    height: 10%;
+    width: 20%;
+    
+}
 }
 
+
+/*Footer*/
 footer{
     width: 100%;
-    background-color: #D94047;
-    position: absolute;
+    background-color: #e0d0ba;
     /*!!!!!!!!!!!!!!!!!!!!!    */
-    bottom: -6200px !important;
     height: 150px;
     text-align: center;
-    color: white;
+    color: #111;
     padding-top: 3%;
+    position: absolute;
+    bottom:-350;
+}
+
+
+footer#topheader{
+    bottom: -6400px !important;
+}
+@media screen and (max-width: 980px){
+footer#topheader{
+    bottom: -5800px !important;
+}   
+}
+@media screen and (max-width: 550px){
+footer#topheader{
+    bottom: -5200px !important;
+}   
+}
+
+
+/*各種結果ページ*/
+
+/*お問い合わせ確認Page*/
+div.panel-heading{
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 0 0 5% 15%;
+    font-family: "MyFont","serif";
+    color:#D94047;
+}
+div.panel-body p{
+   color:white; 
+}
+
+div.panel-body table.table tr{
+    font-size:20px;
+    color:white; 
+}
+div input.btn{
+    color:white;
+    font-size: 20px;
+}
+
+div input.btn-primary {
+    color: #fff;
+    background-color: #CD1F28;
+    border-color: #CD1F28;
+}
+div input.btn-primary:hover{
+        background-color: #CD1F28;
+    border-color: #CD1F28;
+    opacity: 0.5;
+}
+
+
+/*Signup*/
+
+ /*btn btn-primary btn-block*/
+input.SighnupButton{
+    /*position: absolute;*/
+    display: block;
+    background: url(/img/signup.png) no-repeat;
+    width: 350px;
+    height: 100px;
+    z-index: 150;
+    text-align: center;
+    margin: 5% auto; 
+    border:none;
+}
+input.SighnupButton:hover{
+    opacity: 0.5;
+}
+
+
+/*LogIn*/
+ /*btn btn-primary btn-block*/
+input.LogInButton{
+    /*position: absolute;*/
+    display: block;
+    background: url(/img/login.png) no-repeat;
+    width: 350px;
+    height: 100px;
+    z-index: 150;
+    text-align: center;
+    margin: 5% auto; 
+    border:none;
+}
+input.LogInButton:hover{
+    opacity: 0.5;
 }

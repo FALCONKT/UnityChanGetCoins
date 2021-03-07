@@ -1,13 +1,13 @@
 @extends('layouts.app')
-@section('content')
+@section('content_2')
  
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">お問い合わせ</div>
+                <div class="panel-heading">お問い合わせのご確認</div>
                 <div class="panel-body">
-                    <p>誤りがないことを確認のうえ送信ボタンをクリックしてください。</p>
+                    <p>誤りがないことをご確認のうえ送信ボタンをクリックしてください。</p>
  
                     <table class="table">
                         <tr>
@@ -58,3 +58,7 @@
     </div>
 </div>
 @endsection
+
+    <footer>
+    <p>©2021 C&C Inc TaemC All right All Rights Researved.</p>
+    </footer>

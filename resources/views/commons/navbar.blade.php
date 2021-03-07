@@ -33,12 +33,11 @@
                 @else
 
                     <li class="nav-item"><a href="/">TOPへ</a></li>
-                    <li class="nav-item"><a href="/#intro">導　　入</a></li>
-                    <li class="nav-item"><a href="/#story">説　　話</a></li>
+                    <li class="nav-item"><a href="/#storyhead">導　入　説　話</a></li>
                     <li class="nav-item"><a href="/#unitychan">Unityちゃん</a></li>
                     <li class="nav-item"><a href="/#game">Gameのとくちょー</a></li>
-                    <li class="nav-item"><a href="/#enemy">じごく迷路のようかい達</a></li>
-                    <li class="nav-item"><a href="/#stage">じごく迷路の場面</a></li>
+                    <li class="nav-item"><a href="/#enemy">じごく迷路のようかい</a></li>
+                    <li class="nav-item"><a href="/#stage">じごく迷路</a></li>
                     <li class="nav-item"><a href="/#toi">お問い合わせ</a></li>
 
 
