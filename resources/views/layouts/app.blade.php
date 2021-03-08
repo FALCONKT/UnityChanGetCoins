@@ -14,7 +14,7 @@
 
     <body>
 
-    <header>
+    
         {{-- ナビゲーションバー --}}
         @include('commons.navbar')
 
@@ -24,7 +24,6 @@
 
             @yield('content')
 
-
         </div>
         
         <div class="container_2">
@@ -33,8 +32,13 @@
 
         </div>
 
-    </header>
 
+        {{-- <div>
+             @include('commons.footer')
+        </div>       --}}
+
+
+        
 
 
         {{--JQ--}}

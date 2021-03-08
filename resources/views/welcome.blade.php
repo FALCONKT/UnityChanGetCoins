@@ -5,7 +5,7 @@
     <div id="top_Image">
 
 
-        <video src="{{asset('/data/TOP_R.mp4')}}" poster="" loop autoplay muted playsinline></video>
+        <video src="{{asset('/data/TOP_R.mp4')}}" poster="/images/TOP.img.png" loop autoplay muted playsinline></video>
 
         <div class="text-center topButton">
 
@@ -65,7 +65,7 @@
                 <div class="set">
 
                     <div class="unitychan_img">
-                        <img src="{{asset('/img/UnityChan_img.png')}}">
+                        <img src="{{asset('/img/UnityChan_img.png')}}" alt="UnityちゃんImage">
                     </div>
                     
                     <div class="desc unity"> 
@@ -193,20 +193,22 @@
                 
                 <div class="enemy_boss">
                     
-                <h3>？？？</h3>
+                    <h3>？？？</h3>
+                    
+                    <img src="{{asset('/img/mmm.png')}}" alt="？？？">
+                    
+                    <div class="enemy_desc">
+                    <p>迷路の奥に待ち受ける。不思議迷路の主。
+                    巨大な邪悪の力と攻撃力でUnityちゃんに襲い掛かる。</p>
+                    </div>
                 
-                <img src="{{asset('/img/mmm.png')}}" alt="？？？">
-                
-                <div class="enemy_desc">
-                <p>迷路の奥に待ち受ける。不思議迷路の主。
-                巨大な邪悪の力と攻撃力でUnityちゃんに襲い掛かる。</p>
                 </div>
 
             </div>
            
         </section>
 
-        <section id="stage">
+        <section id="stage_all">
             <h2 id="stage">じごく迷路</h2>
   
             <div id="stage_slider">
@@ -251,15 +253,14 @@
 
                 <div class="form-group{{ $errors->has('type') ? ' has-error' : '' }}">
                     <h3>
-                    {!! Form::label('type', 'お問い合わせ内容:', ['class' => 'col-sm-4 control-label']) !!}
+                    <!--{!! Form::label('checkbox', 'お問い合わせ内容:', ['class' => 'col-sm-4 control-label']) !!}-->
+                    お問い合わせ内容:
                     </h3>
                     <div class="col-sm-10">
                         @foreach($types as $key => $value)
                             <label class="checkbox-inline">
-                                <h4>
                                     {!! Form::checkbox('type[]', $value) !!}
                                     {{ $value }}
-                                </h4>
                             </label>
                             
                         @endforeach
@@ -305,17 +306,20 @@
 
                 <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
                     <h3>
-                    {!! Form::label('gender', '性別:', ['class' => 'col-sm-4 control-label']) !!}
+                    <!--{!! Form::label('gender', '性別:', ['class' => 'col-sm-4 control-label']) !!}-->
+                    性別
                     </h3>
                     <div class="col-sm-10">
-                        @foreach($genders as $key => $value)
-                            <label class="checkbox-inline">
-                                <h4>
-                                {!! Form::radio('gender', $value) !!}
+
+<!--<label class="checkbox-inline">-->
+
+@foreach($genders as $key => $value)
+                                {!! Form::radio('gender', $value, null, ['id' => 'radio'.$key]) !!}
                                 {{ $value }}
-                                </h4>
-                            </label>
-                        @endforeach
+@endforeach
+<!--</label>-->
+
+
                         @if ($errors->has('gender'))
                             <span class="help-block">
                         <strong>{{ $errors->first('gender') }}</strong>
@@ -360,13 +364,13 @@
 
     </div>
      <!--id="all_rapp" END-->
+     
+       <footer id="topheader">
+        <p>©2021 C&C Inc TaemC All right All Rights Researved.</p>
+        </footer>
 
-<footer id="topheader">
-<p>©2021 C&C Inc TaemC All right All Rights Researved.</p>
-</footer>
+
      
 @endsection
-
-
 
 

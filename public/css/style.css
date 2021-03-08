@@ -4,6 +4,7 @@ body{
     /*background:url(/img/blood.png) repeat;*/
     background-color: #343a40;
     width: 100%;
+    position: relative;
 }
 
 header{
@@ -135,19 +136,26 @@ ul.navbar-nav li.nav-item{
 
 }
 
-
+/*既存CSSをResetのために　max-width:576pxに*/
 @media (max-width: 576px){
     .navbar-toggler {
-        padding: 0.5rem 1.25rem;
+        padding: 0.25rem 1.25rem;
         font-size: 2rem;
         line-height: 2;
         background-color: transparent;
         /* border: 1px solid transparent; */
         border-radius: .25rem;
+        margin: 0% 0% 5%;
+        width: 100%;
+    }
+    div#nav-bar{
+        position: static;
+        z-index:1000;
+        background-color: #343a40;
     }
     ul.navbar-nav li.nav-item{
     margin: 0;
-        font-family: "MyFont","serif";
+        font-family: "MyFont","serifs";
         font-weight: bolder;
         text-align: center;
         writing-mode: horizontal-tb;
@@ -161,7 +169,7 @@ ul.navbar-nav li.nav-item{
     }
     .navbar-dark .navbar-toggler {
         color: rgba(255,255,255,.5);
-        border: 5px solid #cd1d26;
+        border: 8px double #cd1d26;
     }
 
 }
@@ -191,7 +199,6 @@ h4{
     margin:2% 0% 0.5% 5%;
 }
 
-
 /*TOP親　共通*/
 div.container{
     position: static;
@@ -211,9 +218,18 @@ div.container_2{
     margin-left: 20%;
     z-index: -1000 !important;
 }
-
+@media (max-width: 576px){
+div.container_2{
+    margin-right: 5%;
+    margin-left: 5%;
+}
+    
+}
 
 /*TOP親*/
+/*内部要素を全部子要素扱いにするため　設定*/
+div#top_Image{
+}
 div#top_Image video{
     position: relative;
     right: 0;
@@ -253,7 +269,7 @@ div#top_Image .MemberpButton{
     z-index: 150;/*必須*/
     text-align: center;
     margin: auto; 
-    top: 40%;
+    top: 35%;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -262,13 +278,19 @@ div#top_Image .MemberpButton{
 @media (max-width: 980px){
 div#top_Image .MemberpButton{
     position: absolute;/*必須*/
-    top:105%;
+    top:62%;
+}
+}
+@media (max-width: 768px){
+div#top_Image .MemberpButton{
+    position: absolute;/*必須*/
+    top:66%;
 }
 }
 @media (max-width: 550px){
-div#top_Image .SignUpButton{
-    position: MemberpButton;/*必須*/
-    top:65%;
+div#top_Image .MemberpButton{
+    position: absolute;/*必須*/
+    top:55%;
 }
 }
 /* 基本設定 */
@@ -293,7 +315,7 @@ div#top_Image .SignUpButton{
     z-index: 150;
     text-align: center;
     margin: auto; 
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -302,13 +324,19 @@ div#top_Image .SignUpButton{
 @media (max-width: 980px){
 div#top_Image .SignUpButton{
     position: absolute;/*必須*/
-    top:102%;
+    top:62%;
+}
+}
+@media (max-width: 768px){
+div#top_Image .SignUpButton{
+    position: absolute;/*必須*/
+    top:66%;
 }
 }
 @media (max-width: 550px){
 div#top_Image .SignUpButton{
     position: absolute;/*必須*/
-    top:70%;
+    top:55%;
 }
 }
 
@@ -331,19 +359,22 @@ div.jumbotron{
 
 div#all_rapp{
     position: absolute;
-    top: 135%;
-    right: 16%;
-    left: 16%;
+    top: 100%;
+    right: 15%;
+    left: 15%;
     margin-bottom: 15%;
     padding-top: 3%;
 }
+@media (max-width: 1280px){
+div#all_rapp{
+    top: 110%;
+}
+}
 @media (max-width: 980px){
 div#all_rapp{
-    position: absolute;
-    top: 127%;
-    right: 4%;
-    left: 4%;
-    margin-bottom: 15%;
+    top: 78%;
+    right:4%;
+    left:4%;
     padding-top: 5%;
     padding-bottom: 7.5%;
 }
@@ -351,7 +382,7 @@ div#all_rapp{
 @media (max-width: 550px){
 div#all_rapp {
     position: absolute;
-    top: 100%;
+    top: 73%;
 }
 }
 
@@ -401,6 +432,21 @@ div.set{
     justify-content:space-around;
     margin: 0% 15%;
 }
+@media screen and (max-width: 768px){
+div.set {
+    display: flex;
+    justify-content: space-around;
+    margin: 0% 8%;
+}
+}
+@media screen and (max-width: 550px){
+div.set{
+   display: block;
+    justify-content:space-around;
+    margin: 0;
+}
+}
+
 div.unitychan_img img{
     width: 70%;
     margin-left: 8%;
@@ -413,31 +459,63 @@ div.desc.unity p{
     text-align: left;
     margin-top: 30%;
 }
+@media screen and (max-width: 768px){
+div.unitychan_img img{
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 10%;
+}
+div.desc.unity p{
+    margin-top: 2%;
+    margin-bottom: 25%;
+}
+}
+@media screen and (max-width: 550px){
+div.desc.unity p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bolder;
+    text-align: left;
+    margin-top: 4%;
+    margin-bottom: 20%;
+}
+}
 
+
+/*Gameの特徴*/
 section#game_disc{
+    margin-bottom: 8%;
 }
 
 div.game_ul_img{
     display: flex;
     justify-content:space-between;
 }
+/*既存CSS　*/
+div.game_ul_img ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+    
 @media screen and (max-width: 980px){
 div.game_ul_img{
     display: block;
-    justify-content: space-between;
 }
 }
+
 
 ul.gamesystem{
     text-align: center;
     margin: 2.5% auto 5%;
-    width: 60%
+    width: 55%
 }
 ul.gamesystem li{
     font-weight: bolder;
     font-size:20px;
     line-height: 50px;
     display: block;
+    border-bottom: 2px solid #D94047;
 } 
 div.coin_img{
     margin-top: 6%;
@@ -446,8 +524,8 @@ div.coin_img{
 @media screen and (max-width: 980px){
 ul.gamesystem {
     text-align: center;
-    margin: 3% auto 5%;
-    width: 90%;
+    margin: 3% 0 5%;
+    width: 100%;
 }
 ul.gamesystem li{
     font-weight: bolder;
@@ -458,6 +536,16 @@ ul.gamesystem li{
 div.coin_img{
     margin: 5% 4% 15% 20%;
     width: 50%; 
+}
+}
+@media screen and (max-width: 550px){
+ul.gamesystem {
+    margin:7% 0 10%;
+}
+ul.gamesystem li{
+    font-size:16px;
+    line-height: 32px;
+    display: block;
 }
 }
 
@@ -510,19 +598,20 @@ div#bigWhale div.enemy_desc p{
 @media screen and (max-width: 980px){
 div.enemy_stack{
     display: block;
-    margin: 5% auto;
+    margin: 5% 0;
     width: 100%;
 }
 div.enemy_img_zone{
-    width: 20vw;
+    width: 28vw;
     height: fit-content;
 }
 div#bigWhale div.enemy_img_zone img {
-    width: 46vw;
+    width: 40vw;
 }
 div.enemy div.enemy_desc{
     display: block;
     width: 40vw;
+    margin-left: 6%
 }  
 div.enemy div.enemy_desc p{
     margin:20% 0 0 2%;
@@ -564,9 +653,25 @@ div.enemy_boss img{
     height: auto;
     margin: 2%;
 }
+}
+@media screen and (max-width: 980px){
+div.enemy_boss{
+    display: block;
+}
+div.enemy_boss img{
+    width: 70vw;
+    height: auto;
+    margin: 0 0 5%;
+}
+div.enemy_boss div.enemy_desc{
+    width: 100%;
+    margin: 5% auto 10%;
+}
+div.enemy_boss div.enemy_desc p{
+    margin-top: 5%;
+}
     
 }
-
 
 
 
@@ -603,7 +708,7 @@ ul#list_img img{
 ul#list_img img:hover{
     opacity:0.5;
 }
-section#stage{
+section#stage_all{
     margin-bottom: 5%;
 }
 @media screen and (max-width: 980px){
@@ -627,7 +732,26 @@ ul#list_img li{
     list-style: none;
     display: inline-block;
 }    
-    
+}
+
+@media screen and (max-width: 980px){
+div#display_img{
+  width: 100%;
+  margin: 2.5% 0;
+}
+ul#list_img{
+}
+ul#list_img h3{
+    font-size: 18px;
+    height: 65px;
+}
+ul#list_img li{
+    width: 48%;
+    margin: 1%;
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+}    
 }
 
 /*お問い合わせ*/
@@ -644,6 +768,8 @@ div.panel-body{
 }
 div.form-group div.col-sm-10 {
     max-width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 label{
@@ -691,18 +817,11 @@ div#toihead.panel-heading{
 
 }
 
-/*LogIn先*/
-div.gamebanner img{
-    width:100%;
-    margin-top:2.5%;
-}
-div.gamebanner img:hover{
-    opacity:0.5;
-}
 
+/*TOPへ戻るButton*/
 #pagetop a{
     position: fixed;
-    bottom: 22%;
+    bottom: 23%;
     left: 2.5%;
     border-radius: 50%;
     background-color: #D94047;
@@ -719,16 +838,14 @@ div.gamebanner img:hover{
 }
 @media screen and (max-width: 980px){
 #pagetop a{
-    height: 10%;
-    width: 12%;
-    
+    height: 20%;
+    width: 18%;
 }
 }
 @media screen and (max-width: 550px){
 #pagetop a{
-    height: 10%;
+    height: 14%;
     width: 20%;
-    
 }
 }
 
@@ -743,26 +860,34 @@ footer{
     color: #111;
     padding-top: 3%;
     position: absolute;
-    bottom:-350;
+    bottom:-200px;
 }
 
-
+/*footer#topheader{*/
+/*    bottom: 0 !important;*/
+/*}*/
 footer#topheader{
-    bottom: -6400px !important;
+    bottom: -480% !important;
 }
 @media screen and (max-width: 980px){
 footer#topheader{
-    bottom: -5800px !important;
+    bottom: -665% !important;
 }   
+}
+@media screen and (max-width: 768px){
+footer#topheader{
+    bottom: -575% !important;
+}
 }
 @media screen and (max-width: 550px){
 footer#topheader{
-    bottom: -5200px !important;
+    bottom: -525% !important;
 }   
 }
 
 
 /*各種結果ページ*/
+
 
 /*お問い合わせ確認Page*/
 div.panel-heading{
@@ -814,6 +939,13 @@ input.SighnupButton{
 input.SighnupButton:hover{
     opacity: 0.5;
 }
+@media screen and (max-width: 980px){
+input.SighnupButton{
+    margin: 15% auto 0; 
+    border:none;
+}
+    
+}
 
 
 /*LogIn*/
@@ -831,4 +963,14 @@ input.LogInButton{
 }
 input.LogInButton:hover{
     opacity: 0.5;
+}
+
+
+/*LogIn先*/
+div.gamebanner img{
+    width:100%;
+    margin-top:2.5%;
+}
+div.gamebanner img:hover{
+    opacity:0.5;
 }

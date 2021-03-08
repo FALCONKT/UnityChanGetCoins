@@ -18,6 +18,7 @@
             <ul class="navbar-nav">
  
                  @if (Auth::check())
+                 
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
                         <ul class="dropdown-menu dropdown-menu-right">
@@ -30,6 +31,15 @@
                             <li class="dropdown-item">{!! link_to_route('logout.get', 'Logout') !!}</li>
                         </ul>
                     </li>
+                
+                    <li class="nav-item"><a href="/">TOPへ</a></li>
+                    <li class="nav-item"><a href="/#storyhead">導　入　説　話</a></li>
+                    <li class="nav-item"><a href="/#unitychan">Unityちゃん</a></li>
+                    <li class="nav-item"><a href="/#game">Gameのとくちょー</a></li>
+                    <li class="nav-item"><a href="/#enemy">じごく迷路のようかい</a></li>
+                    <li class="nav-item"><a href="/#stage">じごく迷路</a></li>
+                    <li class="nav-item"><a href="/#toi">お問い合わせ</a></li>
+                
                 @else
 
                     <li class="nav-item"><a href="/">TOPへ</a></li>
